@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ShoeStore</string>
+    <string name="fragment_shoe_details">Shoe Details</string>
+    <string name="fragment_welcome">Welcome</string>
+    <string name="fragment_login">Login</string>
+    <string name="fragment_shoe_list">Shoe List</string>
+    <string name="email_label_text">E-mail</string>
+    <string name="email_hint">insert@youremail.add</string>
+    <string name="password_label_text">Password</string>
+    <string name="login_button_text">Login</string>
+    <string name="register_button_text">Register</string>
+    <string name="password_hint">y0u4+p455w04d</string>
+</resources>
