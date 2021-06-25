@@ -16,4 +16,9 @@
     <string name="instruction_title">"… but before, let\'s ensure this will fit to you, step by step!"</string>
     <string name="instruction_body_text">The application is compose of two screens:\n        • A list of all your shoes (<i>Shoe list</i>)\n        • A form to include new shoes (<i>Shoe details</i>)\n        \n        The Shoe list will be your main screen, and from that, you can include new shoes in Shoe details, clicking in the <b>+</b> button.</string>
     <string name="kick_in">Kick in!</string>
+    <string name="name">Name</string>
+    <string name="company">Company</string>
+    <string name="size">Size</string>
+    <string name="description">Description</string>
+    <string name="add_shoe">Add shoe</string>
 </resources>
