@@ -11,14 +11,9 @@
     <string name="register_button_text">Register</string>
     <string name="password_hint">y0u4+p455w04d</string>
     <string name="welcome_title_text">Welcome!!!</string>
-    <string name="welcome_body_text">…to your new and awesome experience!<br/>
-        Set your foot in and enjoy!</string>
+    <string name="welcome_body_text">…to your new and awesome experience!\nSet your foot in and enjoy!</string>
     <string name="step_in"><![CDATA[Step in >]]></string>
     <string name="instruction_title">"… but before, let\'s ensure this will fit to you, step by step!"</string>
-    <string name="instruction_body_text">The application is compose of two screens:<br/>
-        • A list of all your shoes (<i>Shoe list</i>)<br/>
-        • A form to include new shoes (<i>Shoe details</i>)<br/>
-        <br/>
-        The Shoe list will be your main screen, and from that, you can include new shoes in Shoe details, clicking in the <b>+</b> button.</string>
+    <string name="instruction_body_text">The application is compose of two screens:\n        • A list of all your shoes (<i>Shoe list</i>)\n        • A form to include new shoes (<i>Shoe details</i>)\n        \n        The Shoe list will be your main screen, and from that, you can include new shoes in Shoe details, clicking in the <b>+</b> button.</string>
     <string name="kick_in">Kick in!</string>
 </resources>
