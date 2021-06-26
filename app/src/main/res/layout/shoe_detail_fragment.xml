@@ -1,6 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".screens.details.ShoeDetailFragment"/>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/default_layout_margin"
+        tools:context=".screens.details.ShoeDetailFragment">
+
+        <TextView
+            android:id="@+id/detailTitleLabel"
+            style="@style/titleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shoe_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/detailNameLabel"
+            style="@style/detailLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_layout_margin"
+            android:text="@string/name"
+            app:layout_constraintBottom_toTopOf="@+id/detailCompanyLabel"
+            app:layout_constraintEnd_toEndOf="@+id/detailCompanyLabel"
+            app:layout_constraintTop_toBottomOf="@+id/detailTitleLabel"
+            app:layout_constraintVertical_bias="0.20"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <EditText
+            android:id="@+id/detailNameInput"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailNameLabel"
+            app:layout_constraintStart_toStartOf="@+id/detailCompanyInput" />
+
+        <TextView
+            android:id="@+id/detailCompanyLabel"
+            style="@style/detailLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_layout_margin"
+            android:text="@string/company"
+            app:layout_constraintBottom_toTopOf="@+id/detailSizeLabel"
+            app:layout_constraintEnd_toEndOf="@+id/detailSizeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/detailNameLabel" />
+
+        <EditText
+            android:id="@+id/detailCompanyInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailCompanyLabel"
+            app:layout_constraintStart_toStartOf="@+id/detailSizeInput" />
+
+        <TextView
+            android:id="@+id/detailSizeLabel"
+            style="@style/detailLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/default_layout_margin"
+            android:text="@string/size"
+            app:layout_constraintBottom_toTopOf="@+id/detailDescriptionLabl"
+            app:layout_constraintEnd_toEndOf="@+id/detailDescriptionLabl"
+            app:layout_constraintTop_toBottomOf="@+id/detailCompanyLabel" />
+
+        <EditText
+            android:id="@+id/detailSizeInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailSizeLabel"
+            app:layout_constraintStart_toStartOf="@+id/detailDescriptionInput" />
+
+        <TextView
+            android:id="@+id/detailDescriptionLabl"
+            style="@style/detailLabelStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/detailDescriptionInput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/detailSizeLabel" />
+
+        <EditText
+            android:id="@+id/detailDescriptionInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="start|top"
+            android:importantForAutofill="no"
+            android:inputType="textMultiLine"
+            android:maxLines="2"
+            app:layout_constraintBaseline_toBaselineOf="@+id/detailDescriptionLabl"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/detailDescriptionLabl" />
+
+        <ImageButton
+            android:id="@+id/detailSaveButton"
+            style="@style/positiveButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:contentDescription="@string/save_button"
+            android:src="@android:drawable/ic_menu_save"
+            app:layout_constraintBottom_toBottomOf="@+id/detailCancelButton"
+            app:layout_constraintEnd_toStartOf="@+id/detailCancelButton" />
+
+        <ImageButton
+            android:id="@+id/detailCancelButton"
+            style="@style/negativeButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/cancel_button"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
