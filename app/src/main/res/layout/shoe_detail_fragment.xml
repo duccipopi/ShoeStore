@@ -6,10 +6,11 @@
     <data>
 
         <variable
-            name="shoe"
-            type="com.udacity.shoestore.models.Shoe" />
+            name="viewModel"
+            type="com.udacity.shoestore.screens.details.ShoeDetailViewModel" />
     </data>
 
+    <!-- Constraint layout to better positioning and alignment of fields -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -47,7 +48,7 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:text="@={shoe.name}"
+            android:text="@={viewModel.shoe.name}"
             app:layout_constraintBaseline_toBaselineOf="@+id/detailNameLabel"
             app:layout_constraintStart_toStartOf="@+id/detailCompanyInput" />
 
@@ -69,7 +70,7 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
-            android:text="@={shoe.company}"
+            android:text="@={viewModel.shoe.company}"
             app:layout_constraintBaseline_toBaselineOf="@+id/detailCompanyLabel"
             app:layout_constraintStart_toStartOf="@+id/detailSizeInput" />
 
@@ -91,7 +92,7 @@
             android:ems="10"
             android:importantForAutofill="no"
             android:inputType="numberDecimal"
-            android:text="@{Double.toString(shoe.size)}"
+            android:text="@={viewModel.shoe.stringedSize(viewModel.shoe.size)}"
             app:layout_constraintBaseline_toBaselineOf="@+id/detailSizeLabel"
             app:layout_constraintStart_toStartOf="@+id/detailDescriptionInput" />
 
@@ -115,7 +116,7 @@
             android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:maxLines="2"
-            android:text="@={shoe.description}"
+            android:text="@={viewModel.shoe.description}"
             app:layout_constraintBaseline_toBaselineOf="@+id/detailDescriptionLabl"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
