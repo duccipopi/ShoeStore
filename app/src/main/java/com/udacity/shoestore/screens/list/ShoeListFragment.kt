@@ -19,14 +19,14 @@ class ShoeListFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding: ShoeListFragmentBinding = DataBindingUtil.inflate(inflater, R.layout.shoe_list_fragment, container, false)
+        val binding: ShoeListFragmentBinding =
+            DataBindingUtil.inflate(inflater, R.layout.shoe_list_fragment, container, false)
 
         binding.detailsButton.setOnClickListener {
             findNavController().navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
         }
 
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.shoe_list_fragment, container, false)
+        return binding.root
     }
 
 }
