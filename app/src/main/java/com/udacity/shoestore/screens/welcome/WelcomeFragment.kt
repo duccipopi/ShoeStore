@@ -20,10 +20,10 @@ class WelcomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         val binding: WelcomeFragmentBinding =
             DataBindingUtil.inflate(inflater, R.layout.welcome_fragment, container, false)
 
+        // Navigation setup for button
         binding.nextButton.setOnClickListener {
             findNavController().navigate(R.id.action_welcomeFragment_to_instructionFragment)
         }

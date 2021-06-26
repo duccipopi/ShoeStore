@@ -15,10 +15,6 @@ import com.udacity.shoestore.databinding.InstructionFragmentBinding
  */
 class InstructionFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +22,7 @@ class InstructionFragment : Fragment() {
         val binding: InstructionFragmentBinding =
             DataBindingUtil.inflate(inflater, R.layout.instruction_fragment, container, false)
 
+        // Navigation setup for Next button
         binding.nextButton.setOnClickListener {
             findNavController().navigate(R.id.action_instructionFragment_to_shoeListFragment)
         }
