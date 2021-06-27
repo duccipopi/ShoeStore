@@ -1,15 +1,11 @@
 package com.udacity.shoestore.screens.list
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
-import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ShoeListFragmentBinding
 import com.udacity.shoestore.databinding.ShoeListItemBinding
@@ -51,8 +47,20 @@ class ShoeListFragment : Fragment() {
             findNavController().navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
         }
 
+        // Add logout menu
+        setHasOptionsMenu(true)
 
         return binding.root
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.shoe_list_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        findNavController().navigate(R.id.action_shoeListFragment_to_loginFragment)
+        return super.onOptionsItemSelected(item)
     }
 
 }
