@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ShoeListFragmentBinding
 import com.udacity.shoestore.databinding.ShoeListItemBinding
@@ -45,14 +46,11 @@ class ShoeListFragment : Fragment() {
             }
         })
 
-        // Check if a new shoe was created from ShoeDetailFragment
-        //val args = ShoeListFragmentArgs.fromBundle(requireArguments())
-        //if (args.newShoe != null) viewModel.addShoe(args.newShoe!!)
-
         // Navigation setup for button
         binding.detailsButton.setOnClickListener {
             findNavController().navigate(R.id.action_shoeListFragment_to_shoeDetailFragment)
         }
+
 
         return binding.root
     }
